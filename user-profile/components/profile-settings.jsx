@@ -91,10 +91,10 @@ export default function ProfileSettings() {
               Name:
             </Item>
           </Grid>
-          <Grid item xs={6} md={3.5}>
+          <Grid item xs={7} md={3.5}>
             <TextField id="filled-basic" label="Name" value={usernameValue} onChange={(e) => setUsernameValue(e.target.value)} fullWidth/>
           </Grid>
-          <Grid item xs={2.5} md={4}/>
+          <Grid item xs={1.5} md={4}/>
 
           <Grid item xs={1} md={2.5}/>
           <Grid item xs={2.5} md={1}>
