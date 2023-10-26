@@ -77,7 +77,7 @@ export default function ProfileSettings() {
                   component="span"
                   style={{ backgroundColor: 'black', color: 'white', width: "200px", height: "30px", marginLeft:'10px', marginBottom: '25px'}}
                 >
-                  Subir Imagen
+                  Upload Image
                 </StyledButton>
               </label>
             </div>
@@ -125,7 +125,7 @@ export default function ProfileSettings() {
               style={{ backgroundColor: 'green', color: 'white', width: "200px", height: "40px", marginLeft:'10px', marginBottom: '25px'}}
               fullWidth
             >
-              Guardar
+              Save
             </StyledButton>
           </Grid> 
           
