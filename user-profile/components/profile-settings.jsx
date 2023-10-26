@@ -118,6 +118,17 @@ export default function ProfileSettings() {
           </Grid>
           <Grid item xs={0.5} md={3}/>
 
+          <Grid item xs={6} md={2.1}>
+            <StyledButton
+              color="primary"
+              component="span"
+              style={{ backgroundColor: 'green', color: 'white', width: "200px", height: "40px", marginLeft:'10px', marginBottom: '25px'}}
+              fullWidth
+            >
+              Guardar
+            </StyledButton>
+          </Grid> 
+          
       </Grid>
       </Box>
       
