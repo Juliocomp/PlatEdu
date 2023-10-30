@@ -7,7 +7,7 @@ import { signIn } from 'next-auth/react';
 export default function SignInBtn() {
   return (
     <Button
-      onClick={() => signIn('google')}
+      onClick={() => signIn('github')}
       variant='contained'
       color='primary'
       sx={{
