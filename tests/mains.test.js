@@ -1,0 +1,1 @@
+import Home from '../user-profile/app/page';
