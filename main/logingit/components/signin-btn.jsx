@@ -12,14 +12,13 @@ export default function SignInBtn() {
       color='primary'
       style={{
         borderRadius: 35,
-        backgroundColor: "#21b6ae",
+        backgroundColor: "#212121",
         padding: "18px 36px",
         fontSize: "18px"
       }}
       sx={{
         borderRadius: '28px',
         padding: '8px 16px',
-        backgroundColor: '#212121',
         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
         '&:hover': {
           backgroundColor: '#2E7112',
