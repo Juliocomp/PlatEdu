@@ -105,24 +105,3 @@ a {
     color-scheme: dark;
   }
 }
-
-/* styles.css */
-
-.page {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  max-width: 200px;
-}
-
-button {
-  font-size: 16px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-button[disabled] {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
