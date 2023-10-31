@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Typography } from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { signIn } from 'next-auth/react';
 
 export default function SignInBtn() {
@@ -17,17 +17,18 @@ export default function SignInBtn() {
         fontSize: "18px"
       }}
       sx={{
-        borderRadius: '24px',
+        borderRadius: '28px',
         padding: '8px 16px',
+        backgroundColor: '#212121',
         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
         '&:hover': {
           backgroundColor: '#2E7112',
         },
       }}
     >
-      <GoogleIcon sx={{ fontSize: 30, marginRight: 1 }} />
+      <GitHubIcon sx={{ fontSize: 30, marginRight: 1 }} />
       <Typography variant="button" sx={{ color: 'white' }}>
-        Sign in with Google
+        Sign in with GitHUb
       </Typography>
     </Button>
   );
