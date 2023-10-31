@@ -10,12 +10,18 @@ export default function SignInBtn() {
       onClick={() => signIn('github')}
       variant='contained'
       color='primary'
+      style={{
+        borderRadius: 35,
+        backgroundColor: "#21b6ae",
+        padding: "18px 36px",
+        fontSize: "18px"
+      }}
       sx={{
         borderRadius: '24px',
         padding: '8px 16px',
         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
         '&:hover': {
-          backgroundColor: '#2E7D32',
+          backgroundColor: '#2E7112',
         },
       }}
     >
