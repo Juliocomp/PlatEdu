@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Snackbar, Alert } from '@mui/material';
 import { useSession } from "next-auth/react";
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
@@ -15,7 +15,7 @@ const StyledAvatar = styled(Avatar)`
 `;
 
 const StyledInput = styled(TextField)`
-  display: none; // Oculta el input file
+  display: none;
 `;
 
 const StyledButton = styled(Button)`
@@ -32,12 +32,31 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function ProfileSettings() {
   
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession(); // Session info and status
+
+  // Session info in memory and methods for handling changes 
   const [usernameValue, setUsernameValue] = useState(session?.user.name);
   const [emailValue, setEmailValue] = useState(session?.user.email);
   const [passwordValue, setPasswordValue] = useState(session?.user.passwordValue);
   const [selectedImage, setSelectedImage] = useState(session?.user.image);
 
+  const [isEmailValid, setIsEmailValid] = useState(true); // Email checker
+  const [isSaveSuccessful, setIsSaveSuccessful] = useState(false); // Save checker
+
+  const buttonStyles = {
+    enabled: {
+      backgroundColor: 'green',
+      color: 'white',
+      cursor: 'pointer', // Hand icon
+    },
+    disabled: {
+      backgroundColor: 'gray', // Change color if is disabled
+      color: 'white',
+      cursor: 'not-allowed', // Blocked icon
+    },
+  };
+
+  // Load user info from custom session storage or default session data
   useEffect(() => {
     if (status === "authenticated" && session) {
       console.log('INFO: Loading user info from session.');
@@ -116,12 +135,26 @@ export default function ProfileSettings() {
       console.log('INFO: Custom image saved. Value: ' + selectedImage);
 
       console.log('INFO: New values in session: ', session);
+      
+      setIsSaveSuccessful(true); // Simulates a success message after save
       console.log('SUCCESS: Save button event ended.');
+
+      console.log('INFO: Beginning timeout for message.');
+      setTimeout(() => {
+        setIsSaveSuccessful(false);
+      }, 3000); // Hide message after 3 seconds
+      console.log('INFO: Save message hided. Save checker change to false.');
     }
     else{
       console.log('Error: Save button is not working.');
     }
   };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    setIsEmailValid(emailRegex.test(email));
+  };
+  
 
   if (status === "authenticated") {
     return (
@@ -165,7 +198,7 @@ export default function ProfileSettings() {
             </Item>
           </Grid>
           <Grid item xs={7} md={3.5}>
-            <TextField id="filled-basic" label="Name" value={usernameValue} onChange={(e) => setUsernameValue(e.target.value)} fullWidth/>
+            <TextField id="name-field" label="Name" value={usernameValue} onChange={(e) => setUsernameValue(e.target.value)} fullWidth/>
           </Grid>
           <Grid item xs={1.5} md={4}/>
 
@@ -176,7 +209,19 @@ export default function ProfileSettings() {
             </Item>
           </Grid>
           <Grid item xs={7} md={3.5}>
-            <TextField id="filled-basic" label="Email" value={emailValue} onChange={(e) => setEmailValue(e.target.value)} fullWidth/>
+            <TextField 
+              id="email-field" 
+              label="Email" 
+              value={emailValue} 
+              // Executes on change of this textfield
+              onChange={(e) => {
+                validateEmail(e.target.value);
+                setEmailValue(e.target.value)
+              }} 
+              fullWidth
+              error={!isEmailValid}
+              helperText={!isEmailValid ? 'Please enter a valid email address.' : ''}
+            />
           </Grid>
           <Grid item xs={1} md={3}/>
 
@@ -195,14 +240,33 @@ export default function ProfileSettings() {
             <StyledButton
               color="primary"
               component="span"
-              style={{ backgroundColor: 'green', color: 'white', width: "200px", height: "40px", marginLeft:'10px', marginBottom: '25px'}}
+              style={{
+                ...buttonStyles.enabled, // Default style
+                width: "200px",
+                height: "40px",
+                marginLeft: '10px',
+                marginBottom: '25px',
+                ...(isEmailValid ? buttonStyles.enabled : buttonStyles.disabled) // Disabled style
+              }}
               fullWidth
+              // Executes when save button is clicked
               onClick={handleSave}
+              disabled={!isEmailValid} 
             >
               Save
             </StyledButton>
           </Grid> 
         </Grid>
+
+        <Snackbar
+          open={isSaveSuccessful}
+          autoHideDuration={3000}
+          onClose={() => setIsSaveSuccessful(false)}
+        >
+          <Alert onClose={() => setIsSaveSuccessful(false)} severity="success">
+            Changes saved successfully!
+          </Alert>
+        </Snackbar>
       </Box>
     );
   }
