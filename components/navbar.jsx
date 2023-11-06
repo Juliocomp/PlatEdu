@@ -113,6 +113,7 @@ function ResponsiveAppBar() {
                   <Button
                     key='My Courses'
                     onClick={handleCloseNavMenu}
+                    href='/mycourses'
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     My Courses
@@ -153,6 +154,7 @@ function ResponsiveAppBar() {
               <Button
                 key='My Courses'
                 onClick={handleCloseNavMenu}
+                href='/mycourses'
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 My Courses
