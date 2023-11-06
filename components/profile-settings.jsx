@@ -48,9 +48,6 @@ export default function ProfileSettings() {
   };
 
   if (status === "authenticated") {
-    return <p>Signed in as {session.user.email}</p>
-  }
-  else{
     return (
       <Box sx={{ width: '100%' }}>        
         <Grid 
@@ -128,9 +125,10 @@ export default function ProfileSettings() {
               Save
             </StyledButton>
           </Grid> 
-          
-      </Grid>
+        </Grid>
       </Box>
-      
-    );}
+    );
+  }
+  else{
+  }
 }
