@@ -3,9 +3,13 @@
 import { Button, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { signIn } from 'next-auth/react';
+import Navbar from '@/components/navbar';
+import LogForm from '@/components/logform'
 
 export default function SignInBtn() {
   return (
+
+    
     <Button
       onClick={() => signIn('github')}
       variant='contained'
@@ -29,6 +33,14 @@ export default function SignInBtn() {
       <Typography variant="button" sx={{ color: 'white' }}>
         Sign in with GitHUb
       </Typography>
-    </Button>
+   
+      
+    </Button>,
+    
+    <LogForm/>
+  
+      
+    
+    
   );
 }
