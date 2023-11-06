@@ -22,31 +22,6 @@ import Navbar from '@/components/navbar'
 
 const drawerWidth = 240;
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginRight: -drawerWidth,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginRight: 0,
-    }),
-    /**
-     * This is necessary to enable the selection of content. In the DOM, the stacking order is determined
-     * by the order of appearance. Following this rule, elements appearing later in the markup will overlay
-     * those that appear earlier. Since the Drawer comes after the Main content, this adjustment ensures
-     * proper interaction with the underlying content.
-     */
-    position: 'relative',
-  }),
-);
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -74,27 +49,32 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 
-export default function PersistentDrawerRight() {
+
+
+
+const sideMenu =() =>{
+
   const theme  = darkTheme;
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState( false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpen(!open);
   };
 
   return (
     
-    <Box display='inline-block'   flexGrow= '1'>
-      <AppBar position='fixed'   padding-right= '745px'  open={open} sx={{ background: "black"}} >
-        <Toolbar  >
-        <Navbar  padding-left= '0px' padding-right= '3rem'/>
+    <Box display='grid'   flexGrow= '1'>
+      
+      <AppBar open={open} sx={{ background: "black"}} >
+        
+        <Toolbar position= "relative" display= "contents"  >
+          <Navbar  />
           <IconButton
             color="inherit"
-            //aria-label="open drawer"
             edge="end"
             onClick={handleDrawerOpen}
             sx={{ ...(open && { display: 'none' }) }}
@@ -140,3 +120,5 @@ export default function PersistentDrawerRight() {
     </Box>
   );
 }
+
+export default sideMenu;
