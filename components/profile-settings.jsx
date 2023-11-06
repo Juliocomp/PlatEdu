@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
 import { useSession } from "next-auth/react";
 import { styled } from '@mui/material/styles';
@@ -32,12 +32,20 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function ProfileSettings() {
   
-  const { data: session, status } = useSession()
+  const { data: session, status } = useSession();
   const [usernameValue, setUsernameValue] = useState(session?.user.name);
   const [emailValue, setEmailValue] = useState(session?.user.email);
   const [passwordValue, setPasswordValue] = useState(session?.user.passwordValue);
+  const [selectedImage, setSelectedImage] = useState(session?.user.image);
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  useEffect(() => {
+    if (status === "authenticated" && session) {
+      setUsernameValue(session.user.name);
+      setEmailValue(session.user.email);
+      setPasswordValue(session.user.passwordValue);
+      setSelectedImage(session.user.image);
+    }
+  }, [status, session]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
