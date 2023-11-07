@@ -107,7 +107,7 @@ function getRandomBoolean() {
               component="span"
               style={{
             
-                width: "40px",
+                width: "90px",
                 height: "40px",
                 marginLeft: '10px',
                 marginBottom: '25px',
@@ -128,7 +128,7 @@ function getRandomBoolean() {
               component="span"
               style={{
             
-                width: "40px",
+                width: "90px",
                 height: "40px",
                 marginLeft: '10px',
                 marginBottom: '25px',
@@ -175,14 +175,14 @@ function getRandomBoolean() {
               component="span"
               style={{
                 ...buttonStyles.enabled, // Default style
-                width: "40px",
+                width: "150px",
                 height: "40px",
                 marginLeft: '10px',
                 marginBottom: '25px',
                 ...(getRandomBoolean() ? buttonStyles.enabled : buttonStyles.disabled) // Disabled style
               }}
 
-            >status</StyledButton>
+            >Status</StyledButton>
 
             </Grid>
             
