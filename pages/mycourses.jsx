@@ -20,7 +20,7 @@ const MyCourses = () => {
 
   // Función para redirigir a la página de detalles del curso
   const viewCourseDetails = (courseId) => {
-    router.push(`/curso/${courseId}`);
+    router.push(`${courseId}`);
   };
 
   return (
@@ -33,20 +33,25 @@ const MyCourses = () => {
           onChange={handleCourseKeyChange}
         />
         <br /> <br />
-        <Button variant="contained" onClick={addCourse}>
+        <Button variant="contained" onClick={addCourse} style={{ backgroundColor: '#000000', color: '#ffffff' }}>
           Agregar Curso
         </Button>
         <br /> <br />
-        <ul>
-          {courses.map((course) => (
-            <li key={course.id} onClick={() => viewCourseDetails(course.id)}>
+        {courses.map((course, index) => (
+          <React.Fragment key={course.id}>
+            <Button
+              variant="outlined"
+              style={{ borderColor: '#000000', color: '#000000', margin: '10px' }} // Espacio entre botones
+              onClick={() => viewCourseDetails(course.id)}
+            >
               {course.name}
-            </li>
-          ))}
-        </ul>
+            </Button>
+          </React.Fragment>
+        ))}
       </div>
     </Grid>
   );
+  
 };
 
 export default MyCourses;

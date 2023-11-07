@@ -1,38 +1,38 @@
 [
     {
         "id":1,
-        "title":"anuncios",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "title":"Anuncios",
+        "des":"Examen próximo vienes a las 8:00",
+        "img": "@/public/img/a.jpg"
     },
     {
         "id":2,
-        "title":"tareas",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "title":"Tareas",
+        "des":"La tarea *Primera entregra* esta por vencerse ",
+        "img": "@/public/img/b.jpg"
     },
     {
         "id":3,
-        "title":"archivos",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "title":"Archivos",
+        "des":"Adjunta los archivos de la Práctica no. 1",
+        "img": "@/public/img/c.jpg"
     },
     {
-        "id":4,
-        "title":"Anuncio",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "id":1,
+        "title":"Anuncios",
+        "des":"El próximo martes se estará presentando Google hablando de *Google Cloud*",
+        "img": "@/public/img/d.jpg"
     },
     {
-        "id":5,
-        "title":"Anuncio",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "id":2,
+        "title":"Tareas",
+        "des":"Ensayo sobre el libro Pedro Paramo",
+        "img": "@/public/img/e.jpg"
     },
     {
-        "id":6,
-        "title":"Anuncio",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "id":3,
+        "title":"Archivos",
+        "des":"Adjuntar la simulación realizada en clase",
+        "img": "@/public/img/f.jpg"
     }
 ]

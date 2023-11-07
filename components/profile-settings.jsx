@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
+import ResponsiveAppBar from './navbar';
 
 const StyledAvatar = styled(Avatar)`
   width: 100px;
