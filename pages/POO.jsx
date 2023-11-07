@@ -10,7 +10,7 @@ export default function Home() {
   return (
       <Box sx={{background:'black'}} >
       <MiniDrawer/>
-      <Typography style={{ margin: '25px',fontWeight: 'roboto' , color: 'white',fontSize: '32px'  }}>
+      <Typography style={{ margin: '25px', color: 'white',fontSize: '32px'  }}>
       Programación Orientada a Objetos
       </Typography>
       <Capp/>

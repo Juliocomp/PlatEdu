@@ -10,8 +10,9 @@ export default function Home() {
   return (
     <Box sx={{background:'black'}} >
     <MiniDrawer/>
-    <h1>Python
-    </h1>
+    <Typography style={{ margin: '25px', color: 'white',fontSize: '32px'  }}>
+      Python
+      </Typography>
     <Capp/>
     </Box>
  
