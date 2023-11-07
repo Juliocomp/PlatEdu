@@ -19,6 +19,7 @@ export default function catalogoCursos() {
             y que desean explorar conceptos a
             vanzados que tienen un impacto significativo en diversas disciplinas."
             rating={3}
+            href='/Matematicas'
 
          ></Tarjetas>
        </Grid>
@@ -35,6 +36,8 @@ export default function catalogoCursos() {
             fundamental en el desarrollo de software y es ampliamente 
             utilizada en la industria de la tecnología."
             rating={5}
+            href='/POO'
+
 
          ></Tarjetas>
        </Grid>
@@ -50,6 +53,7 @@ export default function catalogoCursos() {
             de alta calidad,
              cumpliendo con los estándares de la industria."
             rating={2}
+            href='/IngenieriaSoftware'
 
          ></Tarjetas>
        </Grid>
@@ -64,6 +68,7 @@ export default function catalogoCursos() {
             y versatilidad, lo que lo hace ideal para aquellos que desean aprender a programar desde 
             cero o ampliar sus habilidades en programación."
             rating={2}
+            href='/Python'
 
          ></Tarjetas>
        </Grid>
@@ -79,6 +84,7 @@ export default function catalogoCursos() {
             de comunicaciones eficientes se convierte en un
             activo esencial en el mundo de la tecnología."
             rating={2}
+            href='/SisCom'
 
          ></Tarjetas>
        </Grid>
