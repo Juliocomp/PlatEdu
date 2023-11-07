@@ -4,20 +4,19 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import CardSample from "@/components/cardbase";
-import { Grid } from "@mui/material";
+import Typography from '@mui/material/Typography';
+import { Container,Grid } from "@mui/material";
 import Data from '@/app/data.json';
 
-function cards() {
+
+function Capp() {
   return (
-      <Container maxWidth="lg" style={{marginTop:"10rem"}}> 
-      <h1>hola</h1>
-      <Grid container spacing={5} style={{marginTop:'20px'}}>
+      <Container maxWidth="lg" style={{marginTop:"50 px", background: "black"}}> 
+            <h1>hola</h1>
+      <Grid container spacing={10} style={{marginTop:'20px'}}>
         {Data.map((result,index)=>(
-            <Grid item xs={12} md={4} sm={4} key={index}>
-                 <Card sx={{ maxWidth: 345 }}>
+            <Grid item xs={1000} md={100} sm={100000} key={index}>
+                          <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardMedia
         sx={{ height: 140 }}
         image="/static/images/cards/contemplative-reptile.jpg"
@@ -43,10 +42,10 @@ function cards() {
 
         ))}
 
-      </Grid>
+      </Grid>  
       </Container> 
     
   );
 }
 
-export default cards;
+export default Capp;

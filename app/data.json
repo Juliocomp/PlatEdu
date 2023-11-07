@@ -28,5 +28,11 @@
         "title":"Anuncio",
         "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
         "img": "@/public/img/1.jpg"
+    },
+    {
+        "id":6,
+        "title":"Anuncio",
+        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
+        "img": "@/public/img/1.jpg"
     }
 ]

@@ -4,14 +4,12 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 function CardSample() {
-
   const Item = styled(Paper)(() => ({
     backgroundColor: 'black',
     padding: 8,
     textAlign: 'center',
     color: 'black',
   }));
-
   return (
     <>
       <Grid container spacing={4}>
