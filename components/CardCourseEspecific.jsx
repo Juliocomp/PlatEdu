@@ -18,22 +18,21 @@ function Capp() {
             <Grid item xs={1000} md={100} sm={100000} key={index}>
                           <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 70 }}
         image="/static/images/cards/contemplative-reptile.jpg"
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          TAREA 1 
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Para esta primera tarea se desea investigar sobre el "Boom Latinoamerocano", enlistar los principales autores y su obras.
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Comentario Publico</Button>
+        <Button size="small">Comentario Privado</Button>
       </CardActions>
     </Card>
 
