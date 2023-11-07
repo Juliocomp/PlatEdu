@@ -1,19 +1,19 @@
 [
     {
         "id":1,
-        "title":"anuncios",
+        "title":"historia",
         "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "img": "@/public/img/curso1.png"
     },
     {
         "id":2,
-        "title":"tareas",
+        "title":"Anuncio",
         "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
         "img": "@/public/img/1.jpg"
     },
     {
         "id":3,
-        "title":"archivos",
+        "title":"Anuncio",
         "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
         "img": "@/public/img/1.jpg"
     },

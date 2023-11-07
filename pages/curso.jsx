@@ -11,11 +11,7 @@ export default function Home() {
     <Box>
     <MiniDrawer/>
     <h1>hola mundo
-
     </h1>
-    <div>
-      
-    </div>
     <Capp/>
     </Box>
  
