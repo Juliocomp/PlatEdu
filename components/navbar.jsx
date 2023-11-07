@@ -191,12 +191,36 @@ function ResponsiveAppBar() {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  <Link href='/profile' style={{ color: '#FFF', textDecoration:'none'}}>
-                    <MenuItem>Profile</MenuItem>
-                  </Link>
+                  <MenuItem>
+                    <Button
+                      href='/profile'
+                      sx={{
+                        mr: 2,
+                        flexGrow: 1,
+                        fontFamily: 'monospace',
+                        fontWeight: 700,
+                        letterSpacing: '.2rem',
+                        color: 'inherit',
+                        textDecoration: 'none',
+                      }}
+                      // Executes when log out button is clicked
+                      onClick={handleSignOut}
+                    >
+                      Profile
+                    </Button>
+                  </MenuItem>
                   
                   <MenuItem component='button'>
                     <Button
+                      sx={{
+                        mr: 2,
+                        flexGrow: 1,
+                        fontFamily: 'monospace',
+                        fontWeight: 700,
+                        letterSpacing: '.2rem',
+                        color: 'inherit',
+                        textDecoration: 'none',
+                      }}
                       // Executes when log out button is clicked
                       onClick={handleSignOut}
                     >
