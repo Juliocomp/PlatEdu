@@ -17,7 +17,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useSession, signOut } from "next-auth/react";
 
-import Link from 'next/link';
 
 const darkTheme = createTheme({
   palette: {
@@ -28,10 +27,24 @@ const darkTheme = createTheme({
   },
 });
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ customImage }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const { status, data: session } = useSession();
+  const [selectedImage, setSelectedImage] = useState(session?.user.image);
+
+  useEffect(() => {
+    if (session) {
+      const customImage = sessionStorage.getItem('customImage');
+      if (customImage) {
+        setSelectedImage(customImage);
+        console.log('INFO: Image value loaded: ' + customImage);
+      } else {
+        setSelectedImage(session.user.image);
+        console.log('INFO: Image value loaded: ' + session.user.image);
+      }
+    }
+  }, [session]);
 
   const handleSignOut = async () => {
     console.log('INFO: Login out from user session.')
@@ -174,7 +187,7 @@ function ResponsiveAppBar() {
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar src={session?.user?.image} />
+                    <Avatar src={selectedImage} />
                   </IconButton>
                 </Tooltip>
                 <Menu
