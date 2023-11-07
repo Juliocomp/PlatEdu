@@ -40,13 +40,11 @@ function catalogoApp() {
 
   return (
       <Container maxWidth="lg" style={{marginTop:"50 px", background: "black"}}> 
-            <Typography variant='h4' align='center'>
-              CATALOGO DE CURSOS
-              </Typography>
-      <Grid  container spacing={5} style={{marginTop:"20px"}} >
+           <Typography variant='h4' ></Typography>
+      <Grid container spacing={5} style={{marginTop:'20px'}}>
         {Data1.map((result,index)=>(
             <Grid item xs={12} md={4} sm={4} key={index}>
-                       <Card sx={{ maxWidth: 345 }}>
+                       <Card sx={{ maxWidth: 345, display:'flex' }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -68,10 +66,11 @@ function catalogoApp() {
         alt="Paella dish"
       />
       <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+            {result.title}
+        </Typography>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+            {result.des}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

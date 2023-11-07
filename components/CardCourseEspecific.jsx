@@ -15,20 +15,19 @@ function Capp() {
             <h1>hola</h1>
       <Grid container spacing={10} style={{marginTop:'20px'}}>
         {Data.map((result,index)=>(
-            <Grid item xs={1000} md={100} sm={100000} key={index}>
-                          <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Grid item sx={{ width: '100%', display: 'flex', flexDirection: 'column' }} key={index}>
+                          <Card >
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={result.img}
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+            {result.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+            {result.des}
         </Typography>
       </CardContent>
       <CardActions>
