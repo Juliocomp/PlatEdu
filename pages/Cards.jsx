@@ -23,37 +23,45 @@ const ratingStyle = { //estilo para el rating
   justifyContent: 'flex-end',//elementos dentro del contenedor se alinearán horizontalmente en el extremo derecho del espacio disponible.
 };
 
-const Tarjetas=({imagen,nombreCurso,descripcion,rating}) => {
+const anchorStyle = {
+  textDecoration: 'none', // Elimina el subrayado
+  color: 'inherit', // Usa el color heredado (por defecto)
+};
+
+const Tarjetas=({imagen,nombreCurso,descripcion,rating,href}) => {
   
 
   return (
-    <Card sx={cardStyle}>
-      <CardActionArea style={{ flex: 1 }}>
-        <CardMedia
-          component="img"
-          height="140" //alto de la imagen, altera el tamano de la carta 
-          image={imagen}
-          alt="imagen curso"
-          style={{ objectFit: 'cover' }} // Establecer objectFit en 'cover'
-        />
-        <CardContent style={{ flex: 1 }}>
-          <Typography gutterBottom variant="h5" component="div" >
-              {nombreCurso} 
-          </Typography >
-          <Typography sx={descripcionStyle}ariant="body2" color="text.secondary" >
-              {descripcion} 
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+    <a href={href} style={anchorStyle}>
+      <Card sx={cardStyle}>
+        <CardActionArea style={{ flex: 1 }}>
+          <CardMedia
+            component="img"
+            height="140" //alto de la imagen, altera el tamano de la carta 
+            image={imagen}
+            alt="imagen curso"
+            style={{ objectFit: 'cover' }} // Establecer objectFit en 'cover'
+          />
+          <CardContent style={{ flex: 1 }}>
+            <Typography gutterBottom variant="h5" component="div" >
+                {nombreCurso} 
+            </Typography >
+            <Typography sx={descripcionStyle}ariant="body2" color="text.secondary" >
+                {descripcion} 
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+            
+          <Rating name="no-value" value={rating} style={ratingStyle} disabled/>
           
-        <Rating name="no-value" value={rating} style={ratingStyle} disabled/>
-        
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
+    </a>
+
   );
 };
 export default Tarjetas;
