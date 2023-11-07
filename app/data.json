@@ -1,38 +1,38 @@
 [
     {
-        "id":1,
-        "title":"anuncios",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
+        "id": 1,
+        "title": "Matemáticas",
+        "des": "Refuerza tus habildiades matemáticas necesarias para poder pasar la DCB.",
+        "img": "@/public/img/mates.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Historia",
+        "des": "La historia es chisme, un antes y un después, una serie de causas y efectos",
+        "img": "@/public/img/historia.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Biología",
+        "des": "Aprende de tu cuerpo y cómo conservarlo, antes de que aprendas a la mala.",
         "img": "@/public/img/1.jpg"
     },
     {
-        "id":2,
-        "title":"tareas",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "id": 4,
+        "title": "Introducción a Linux",
+        "des": "Aprende sobre software y libertad. Abajo APPLE!",
+        "img": "@/public/img/linux.png"
     },
     {
-        "id":3,
-        "title":"archivos",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "id": 5,
+        "title": "Redes",
+        "des": "Además de lo macroscópico y lo microsópico, que no puedes ver, está el mundo de las redes",
+        "img": "@/public/img/redes.png"
     },
     {
-        "id":4,
-        "title":"Anuncio",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
-    },
-    {
-        "id":5,
-        "title":"Anuncio",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
-    },
-    {
-        "id":6,
-        "title":"Anuncio",
-        "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/1.jpg"
+        "id": 6,
+        "title": "Bases de Datos",
+        "des": "Aprende porqué Excel no es una base de datos y cómo hacer un buen trabajo con ellas",
+        "img": "@/public/img/bases.png"
     }
 ]
