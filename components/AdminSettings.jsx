@@ -102,16 +102,54 @@ function getRandomBoolean() {
             <Itemcurso >
             {constant}
             </Itemcurso>
-          
+            <StyledButton
+              color="primary"
+              component="span"
+              style={{
+            
+                width: "40px",
+                height: "40px",
+                marginLeft: '10px',
+                marginBottom: '25px',
+                backgroundColor: 'red', // Change color if is disabled
+                color: 'black',
+                cursor: 'not-allowed', // Blocked icon
+                text:'Borrar'
+        
+              }}
+
+            >
+                Borrar
+            </StyledButton>   
+
+
+            <StyledButton
+              color="primary"
+              component="span"
+              style={{
+            
+                width: "40px",
+                height: "40px",
+                marginLeft: '10px',
+                marginBottom: '25px',
+                backgroundColor: 'yellow', // Change color if is disabled
+                color: 'black',
+                cursor: 'not-allowed', // Blocked icon
+                text:'Borrar'
+        
+              }}
+
+            >
+                Editar
+            </StyledButton>     
+            
+            
+
         </Grid>
         
         
       ))}
             </Grid>
-
-
-
-
             <Grid item xs={6}> 
             <Grid item xs={2.5} md={12}>
             <Item >
@@ -119,8 +157,6 @@ function getRandomBoolean() {
             </Item>
           </Grid>
           <Grid item xs={1} md={3.5}/>
-
-
           {itemsColumn2.map((constant, index) => (
             
         <Grid item xs={12} key={index}>
@@ -130,8 +166,6 @@ function getRandomBoolean() {
             <Itemalum >
             {constant}
             </Itemalum>
-
-
             </Grid>
 
             <Grid item xs={2}>
@@ -148,28 +182,18 @@ function getRandomBoolean() {
                 ...(getRandomBoolean() ? buttonStyles.enabled : buttonStyles.disabled) // Disabled style
               }}
 
-            />
+            >status</StyledButton>
 
             </Grid>
             
         </Grid>
-
-
         
       ))}
             </Grid>
-
-
         </Grid>
 
-
-
-
-        
       );
 
-
-    
 };
 
 
