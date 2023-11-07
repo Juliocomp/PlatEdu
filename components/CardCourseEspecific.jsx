@@ -16,8 +16,18 @@ function Capp() {
         {Data.map((result,index)=>(
             <Grid item sx={{ width: '100%', display: 'flex', flexDirection: 'column' }} key={index}>
                           <Card >
+<<<<<<< HEAD
                           <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
+=======
+      <CardMedia
+        sx={{ height: 140 }}
+        image={result.img}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+>>>>>>> 87a65458b9fd09fac6deb37a5d90f1111e6e5174
             {result.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
