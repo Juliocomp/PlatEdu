@@ -18,7 +18,9 @@ export default function SignInBtn() {
         borderRadius: 35,
         backgroundColor: "#212121",
         padding: "18px 36px",
-        fontSize: "18px"
+        fontSize: "18px",
+        width:"270px",
+        height:"60px",
       }}
       sx={{
         borderRadius: '28px',
@@ -35,9 +37,9 @@ export default function SignInBtn() {
       </Typography>
    
       
-    </Button>,
+    </Button>
     
-    <LogForm/>
+    
   
       
     
