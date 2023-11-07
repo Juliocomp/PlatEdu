@@ -15,12 +15,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 import Navbar from '@/components/navbar'
+import { Typography,Grid, Badge } from '@mui/material';
+import { AlignHorizontalLeft,AnnouncementSharp,AssignmentLateSharp, Event, Message } from '@mui/icons-material';
 
-
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 
 const AppBar = styled(MuiAppBar, {
@@ -64,22 +64,25 @@ const sideMenu =() =>{
   const handleDrawerClose = () => {
     setOpen(!open);
   };
-
+ 
   return (
     
-    <Box display='grid'   flexGrow= '1'>
+    <Box sx={{ display: 'flex' }}>
       
-      <AppBar open={open} sx={{ background: "black"}} >
-        
-        <Toolbar position= "relative" display= "contents"  >
-          <Navbar  />
+      
+      <AppBar position="absolute" sx={{ background: "black"}} open={open}>
+        <Toolbar >
+            <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
+            <Navbar  />
+            </Typography>
           <IconButton
             color="inherit"
+            aria-label="open drawer"
             edge="end"
             onClick={handleDrawerOpen}
             sx={{ ...(open && { display: 'none' }) }}
           >
-            <MenuIcon />
+            <AlignHorizontalLeft />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -102,16 +105,21 @@ const sideMenu =() =>{
         </DrawerHeader>
         <Divider />
         <List>
-          {['Tareas Pendientes', 'Novedades', 'Calendario', 'Mensajes'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+              {[
+                { text: 'Tareas Pendientes', icon: < AssignmentLateSharp /> },
+                { text: 'Novedades', icon: <AnnouncementSharp /> },
+                { text: 'Calendario', icon: <Event /> },
+                { text: 'Mensajes', icon: <Message /> }
+                ].map((item, index) => (
+              <ListItem key={item.text} disablePadding>
+                <ListItemButton>
+                    <ListItemIcon>
+                      {item.icon}
+                    </ListItemIcon>
+                    <ListItemText primary={item.text} />
+                    </ListItemButton>
+              </ListItem>
+              ))}
         </List>
         <Divider />
        

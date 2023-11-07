@@ -4,14 +4,18 @@ import { Container, Typography, Button, List, ListItem, ListItemText, Box } from
 import Cards from '@/components/CardCourseEspecific';
 import { Main } from '@/components/sideMenu';
 
+
 export default function Home() {
   
   return (
     <Box>
-      
     <MiniDrawer/>
-    <main/>
-    
+    <h1>hola mundo
+
+    </h1>
+    <div>
+      
+    </div>
     <cards/>
     </Box>
  
