@@ -1,38 +1,38 @@
 [
     {
-        "id": 1,
-        "title": "Matemáticas",
-        "des": "Refuerza tus habildiades matemáticas necesarias para poder pasar la DCB.",
-        "img": "@/public/img/mates.jpg"
+        "id":1,
+        "title":"Anuncios",
+        "des":"Examen próximo vienes a las 8:00",
+        "img": "@/public/img/a.jpg"
     },
     {
-        "id": 2,
-        "title": "Historia",
-        "des": "La historia es chisme, un antes y un después, una serie de causas y efectos",
-        "img": "@/public/img/historia.jpg"
+        "id":2,
+        "title":"Tareas",
+        "des":"La tarea *Primera entregra* esta por vencerse ",
+        "img": "@/public/img/b.jpg"
     },
     {
-        "id": 3,
-        "title": "Biología",
-        "des": "Aprende de tu cuerpo y cómo conservarlo, antes de que aprendas a la mala.",
-        "img": "@/public/img/1.jpg"
+        "id":3,
+        "title":"Archivos",
+        "des":"Adjunta los archivos de la Práctica no. 1",
+        "img": "@/public/img/c.jpg"
     },
     {
-        "id": 4,
-        "title": "Introducción a Linux",
-        "des": "Aprende sobre software y libertad. Abajo APPLE!",
-        "img": "@/public/img/linux.png"
+        "id":1,
+        "title":"Anuncios",
+        "des":"El próximo martes se estará presentando Google hablando de *Google Cloud*",
+        "img": "@/public/img/d.jpg"
     },
     {
-        "id": 5,
-        "title": "Redes",
-        "des": "Además de lo macroscópico y lo microsópico, que no puedes ver, está el mundo de las redes",
-        "img": "@/public/img/redes.png"
+        "id":2,
+        "title":"Tareas",
+        "des":"Ensayo sobre el libro Pedro Paramo",
+        "img": "@/public/img/e.jpg"
     },
     {
-        "id": 6,
-        "title": "Bases de Datos",
-        "des": "Aprende porqué Excel no es una base de datos y cómo hacer un buen trabajo con ellas",
-        "img": "@/public/img/bases.png"
+        "id":3,
+        "title":"Archivos",
+        "des":"Adjuntar la simulación realizada en clase",
+        "img": "@/public/img/f.jpg"
     }
 ]
