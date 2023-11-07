@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Snackbar, Alert } from '@mui/material';
 import { useSession } from "next-auth/react";
+import { useRouter } from 'next/router';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
@@ -31,7 +32,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ProfileSettings() {
-  
+  const router = useRouter();
+
   const { data: session, status } = useSession(); // Session info and status
 
   // Session info in memory and methods for handling changes 
@@ -58,50 +60,57 @@ export default function ProfileSettings() {
 
   // Load user info from custom session storage or default session data
   useEffect(() => {
-    if (status === "authenticated" && session) {
-      console.log('INFO: Loading user info from session.');
-      const customUsername = sessionStorage.getItem('customUsername');
-      const customEmail = sessionStorage.getItem('customEmail');
-      const customPassword = sessionStorage.getItem('customPassword');
-      const customImage = sessionStorage.getItem('customImage');
+    console.log('INFO: Status value: ' + status);
 
-      if (customUsername) {
-        setUsernameValue(customUsername);
-        console.log('INFO: Username value loaded: ' + customUsername);
+    if(status != 'loading'){
+      if (status === "authenticated" && session) {
+        console.log('INFO: Loading user info from session.');
+        const customUsername = sessionStorage.getItem('customUsername');
+        const customEmail = sessionStorage.getItem('customEmail');
+        const customPassword = sessionStorage.getItem('customPassword');
+        const customImage = sessionStorage.getItem('customImage');
+
+        if (customUsername) {
+          setUsernameValue(customUsername);
+          console.log('INFO: Username value loaded: ' + customUsername);
+        }
+        else{
+          setUsernameValue(session.user.name);
+          console.log('INFO: Username value loaded: ' + session.user.name);
+        }
+
+        if (customEmail) {
+          setEmailValue(customEmail);
+          console.log('INFO: Email value loaded: ' + customEmail);
+        }
+        else{
+          setEmailValue(session.user.email);
+          console.log('INFO: Email value loaded: ' + session.user.email);
+        }
+
+        if (customPassword){
+          setPasswordValue(customPassword);
+          console.log('INFO: Password value loaded.');
+        }
+        else{
+          setPasswordValue(session.user.passwordValue);
+          console.log('INFO: Password value loaded.');
+        }
+
+        if (customImage){
+          setSelectedImage(customImage);
+          console.log('INFO: Image value loaded: ' + customImage);
+        }
+        else{
+          setSelectedImage(session.user.image);
+          console.log('INFO: Image value loaded: ' + session.user.image);
+        }
+        console.log('SUCCESS: Info user loaded correctly.');
       }
       else{
-        setUsernameValue(session.user.name);
-        console.log('INFO: Username value loaded: ' + session.user.name);
+        console.log('WARNING: Session is not authenticated. Redirecting to 401 page.');
+        router.push('/notauthorized');
       }
-
-      if (customEmail) {
-        setEmailValue(customEmail);
-        console.log('INFO: Email value loaded: ' + customEmail);
-      }
-      else{
-        setEmailValue(session.user.email);
-        console.log('INFO: Email value loaded: ' + session.user.email);
-      }
-
-      if (customPassword){
-        setPasswordValue(customPassword);
-        console.log('INFO: Password value loaded.');
-      }
-      else{
-        setPasswordValue(session.user.passwordValue);
-        console.log('INFO: Password value loaded.');
-      }
-
-      if (customImage){
-        setSelectedImage(customImage);
-        console.log('INFO: Image value loaded: ' + customImage);
-      }
-      else{
-        setSelectedImage(session.user.image);
-        console.log('INFO: Image value loaded: ' + session.user.image);
-      }
-      
-      console.log('SUCCESS: Info user loaded correctly.');
     }
   }, [status, session]);
 
@@ -269,7 +278,5 @@ export default function ProfileSettings() {
         </Snackbar>
       </Box>
     );
-  }
-  else{
   }
 }
