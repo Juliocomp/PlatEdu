@@ -3,12 +3,12 @@
         "id":1,
         "title":"Anuncios",
         "des":"Examen próximo vienes a las 8:00",
-        "img": "@/public/img/a.jpg"
+        "img": " /public/img/a.jpg"
     },
     {
         "id":2,
         "title":"Tareas",
-        "des":"La tarea *Primera entregra* esta por vencerse ",
+        "des":"La tarea *Primera entrega* esta por vencerse ",
         "img": "@/public/img/b.jpg"
     },
     {
