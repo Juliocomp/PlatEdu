@@ -1,5 +1,7 @@
 import UserInfo from '@/components/user-info';
 import { Grid } from '@mui/material';
+import Navbar from '@/components/navbar';
+import LogForm from '@/components/logform'
 
 export default function Home() {
   return (
