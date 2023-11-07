@@ -127,6 +127,16 @@ function ResponsiveAppBar() {
                       My Courses
                     </Button>
                   </MenuItem>
+                  <MenuItem key='Administration' onClick={handleCloseNavMenu}>
+                    <Button
+                      key='Administration'
+                      onClick={handleCloseNavMenu}
+                      href='/administrator'
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      Administration
+                    </Button>
+                  </MenuItem>
                 </Menu>
               </Box>
 
@@ -166,6 +176,14 @@ function ResponsiveAppBar() {
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                   My Courses
+                </Button>
+                <Button
+                  key='Administration'
+                  onClick={handleCloseNavMenu}
+                  href='/administrator'
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  Administration
                 </Button>
               </Box>
 
