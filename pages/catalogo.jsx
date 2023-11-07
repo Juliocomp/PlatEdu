@@ -40,11 +40,13 @@ function catalogoApp() {
 
   return (
       <Container maxWidth="lg" style={{marginTop:"50 px", background: "black"}}> 
-            <h1>hola</h1>
-      <Grid container spacing={10} style={{marginTop:'20px'}}>
+            <Typography variant='h4' align='center'>
+              CATALOGO DE CURSOS
+              </Typography>
+      <Grid  container spacing={5} style={{marginTop:"20px"}} >
         {Data1.map((result,index)=>(
-            <Grid item xs={1000} md={100} sm={100000} key={index}>
-                       <Card sx={{ maxWidth: 345, display:'flex' }}>
+            <Grid item xs={12} md={4} sm={4} key={index}>
+                       <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">

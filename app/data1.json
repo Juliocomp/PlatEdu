@@ -1,9 +1,9 @@
 [
     {
         "id":1,
-        "title":"historia",
+        "title":"python",
         "des":"This a friendly reminding, You have until 23:59 to upload your proyecto guys.Remember tomorrow we have the first revision.Good look.",
-        "img": "@/public/img/curso1.png"
+        "img": "@/public/img/python"
     },
     {
         "id":2,
