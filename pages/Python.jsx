@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Box>
     <MiniDrawer/>
-    <h1>hola mundo
+    <h1>Python
     </h1>
     <Capp/>
     </Box>
@@ -19,4 +19,3 @@ export default function Home() {
     
   );
 }
-
