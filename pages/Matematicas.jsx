@@ -8,10 +8,11 @@ import { Main } from '@/components/sideMenu';
 export default function Home() {
   
   return (
-    <Box>
+    <Box sx={{background:'black'}} >
     <MiniDrawer/>
-    <h1>Matematicas
-    </h1>
+    <Typography style={{ margin: '25px', color: 'white',fontSize: '32px'  }}>
+      Matematicas
+      </Typography>
     <Capp/>
     </Box>
  

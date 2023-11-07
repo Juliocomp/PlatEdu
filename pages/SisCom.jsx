@@ -8,7 +8,7 @@ import { Main } from '@/components/sideMenu';
 export default function Home() {
   
   return (
-    <Box>
+    <Box sx={{background:'black'}} >
     <MiniDrawer/>
     <h1>Sistemas de Comunicaciones
     </h1>

@@ -106,10 +106,10 @@ const sideMenu =() =>{
         <Divider />
         <List>
               {[
-                { text: 'Tareas Pendientes', icon: < AssignmentLateSharp /> },
-                { text: 'Novedades', icon: <AnnouncementSharp /> },
-                { text: 'Calendario', icon: <Event /> },
-                { text: 'Mensajes', icon: <Message /> }
+                { text: 'Tareas Pendientes', icon: < AssignmentLateSharp /> , href:'/catalogo'},
+                { text: 'Novedades', icon: <AnnouncementSharp /> , path: '/Novedades'},
+                { text: 'Calendario', icon: <Event />, path: '/Calendario' },
+                { text: 'Mensajes', icon: <Message />, path: '/Mensajes' }
                 ].map((item, index) => (
               <ListItem key={item.text} disablePadding>
                 <ListItemButton>

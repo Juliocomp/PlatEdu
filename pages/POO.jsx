@@ -8,14 +8,15 @@ import { Main } from '@/components/sideMenu';
 export default function Home() {
   
   return (
-    <Box>
-    <MiniDrawer/>
-    <h1>Programación Orientada a Objetos
-    </h1>
-    <Capp/>
-    </Box>
- 
-    
+      <Box sx={{background:'black'}} >
+      <MiniDrawer/>
+      <Typography style={{ margin: '25px',fontWeight: 'roboto' , color: 'white',fontSize: '32px'  }}>
+      Programación Orientada a Objetos
+      </Typography>
+      <Capp/>
+      </Box>
+  
+      
     
   );
 }
