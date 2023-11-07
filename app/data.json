@@ -3,37 +3,36 @@
         "id":1,
         "title":"Anuncios",
         "des":"Examen próximo vienes a las 8:00",
-        "img": "@/public/img/1.jpg"
+        "img": "@/public/img/a.jpg"
     },
     {
         "id":2,
         "title":"Tareas",
         "des":"La tarea *Primera entregra* esta por vencerse ",
-        "img": "@/public/img/1.jpg"
+        "img": "@/public/img/b.jpg"
     },
     {
         "id":3,
         "title":"Archivos",
         "des":"Adjunta los archivos de la Práctica no. 1",
-        "img": "@/public/img/1.jpg"
+        "img": "@/public/img/c.jpg"
     },
     {
         "id":1,
         "title":"Anuncios",
         "des":"El próximo martes se estará presentando Google hablando de *Google Cloud*",
-        "img": "@/public/img/1.jpg"
+        "img": "@/public/img/d.jpg"
     },
     {
         "id":2,
         "title":"Tareas",
         "des":"Ensayo sobre el libro Pedro Paramo",
-        "img": "@/public/img/1.jpg"
+        "img": "@/public/img/e.jpg"
     },
     {
         "id":3,
         "title":"Archivos",
         "des":"Adjuntar la simulación realizada en clase",
-        "img": "@/public/img/1.jpg"
-    },
-   
+        "img": "@/public/img/f.jpg"
+    }
 ]
