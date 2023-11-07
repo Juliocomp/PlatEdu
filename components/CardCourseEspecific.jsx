@@ -17,9 +17,12 @@ function Capp() {
             <Grid item sx={{ width: '100%', display: 'flex', flexDirection: 'column' }} key={index}>
                           <Card >
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
 =======
+=======
+>>>>>>> 9de214990ed416a5088fafc1ba038e643cfb3ecc
       <CardMedia
         sx={{ height: 140 }}
         image={result.img}
@@ -27,7 +30,10 @@ function Capp() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
+<<<<<<< HEAD
 >>>>>>> 87a65458b9fd09fac6deb37a5d90f1111e6e5174
+=======
+>>>>>>> 9de214990ed416a5088fafc1ba038e643cfb3ecc
             {result.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
