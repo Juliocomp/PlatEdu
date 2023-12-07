@@ -121,7 +121,9 @@ const sideMenu =() =>{
               </ListItem>
               ))}
         </List>
+        
         <Divider />
+        
        
       </Drawer>
     
