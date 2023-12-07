@@ -89,6 +89,7 @@ const LogForm = () => {
       <Button variant="contained"
         color="primary" 
         type="submit" 
+        href="register_user"
         style={{
         borderRadius: 35,
         backgroundColor: "#212121",
@@ -112,6 +113,7 @@ const LogForm = () => {
       <Button variant="contained"
         color="primary" 
         type="submit" 
+        href="/change_password"
         style={{
         borderRadius: 35,
         backgroundColor: "#212121",
