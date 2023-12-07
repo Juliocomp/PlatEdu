@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,18 +8,38 @@ import { Container, Grid, TextField, Avatar } from "@mui/material";
 import Data from "@/app/data.json";
 
 function Capp() {
-  const [commentText, setCommentText] = useState("");
+  const [commentTexts, setCommentTexts] = useState({});
   const [comments, setComments] = useState([]);
 
-  const handleCommentChange = (event) => {
-    setCommentText(event.target.value);
+  useEffect(() => {
+    // Recuperar comentarios almacenados en localStorage al cargar la página
+    const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+    setComments(storedComments);
+  }, []);
+
+  const handleCommentChange = (cardId, event) => {
+    setCommentTexts({
+      ...commentTexts,
+      [cardId]: event.target.value
+    });
   };
 
-  const handlePublicComment = (index, user) => {
-    // Agregar el comentario a la lista de comentarios
-    setComments([...comments, { index, user, text: commentText }]);
-    // Limpiar el campo de texto
-    setCommentText("");
+  const handlePublicComment = (cardId, user) => {
+    const commentText = commentTexts[cardId];
+
+    if (commentText) {
+      // Agregar el comentario a la lista de comentarios
+      const newComment = { cardId, user, text: commentText, id: Date.now() };
+      const updatedComments = [...comments, newComment];
+      setComments(updatedComments);
+      // Almacenar comentarios en localStorage
+      localStorage.setItem("comments", JSON.stringify(updatedComments));
+      // Limpiar el campo de texto
+      setCommentTexts({
+        ...commentTexts,
+        [cardId]: ""
+      });
+    }
   };
 
   return (
@@ -53,12 +73,12 @@ function Capp() {
                   label="Comentario Público"
                   variant="outlined"
                   size="small"
-                  value={commentText}
-                  onChange={handleCommentChange}
+                  value={commentTexts[result.id] || ""}
+                  onChange={(event) => handleCommentChange(result.id, event)}
                 />
                 <Button
                   size="small"
-                  onClick={() => handlePublicComment(index, result)}
+                  onClick={() => handlePublicComment(result.id, result)}
                 >
                   Agregar Comentario
                 </Button>
@@ -66,10 +86,10 @@ function Capp() {
               {/* Mostrar comentarios */}
               <CardContent>
                 {comments
-                  .filter((comment) => comment.index === index)
-                  .map((comment, commentIndex) => (
+                  .filter((comment) => comment.cardId === result.id)
+                  .map((comment) => (
                     <div
-                      key={commentIndex}
+                      key={comment.id}
                       style={{ display: "flex", alignItems: "center" }}
                     >
                       <Avatar
