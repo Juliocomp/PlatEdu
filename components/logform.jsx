@@ -6,35 +6,18 @@ import { InputAdornment } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { signIn } from 'next-auth/react';
 import SignInBtn from './signin-btn';
-import Popup from './PopupForgot';
-import Popup from './PopupRegister';
+
 
 
 
 const LogForm = () => {
-/*
-  const [showPopup, setShowPopup] = useState(false);
-  const [dataFromPopup, setDataFromPopup] = useState('');
 
-  const handleOpenPopup = () => {
-    setShowPopup(true);
-  };
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
 
-  const handleReceiveData = (data) => {
-    setDataFromPopup(data);
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    
   };
-*/
-
-
-
-
 
   return (
     <form onSubmit={handleSubmit}>
