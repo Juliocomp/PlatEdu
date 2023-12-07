@@ -8,12 +8,11 @@ import { signIn } from 'next-auth/react';
 import SignInBtn from './signin-btn';
 
 
+
+
 const LogForm = () => {
- 
 
-  
 
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -83,10 +82,61 @@ const LogForm = () => {
       }}>
         LogIn
       </Button>
+      
+      <br />
       <br />
 
+      <Button variant="contained"
+        color="primary" 
+        type="submit" 
+        href="register_user"
+        style={{
+        borderRadius: 35,
+        backgroundColor: "#212121",
+        paddingTop: "7px",
+        fontSize: "10px",
+        width:"100px",
+        height:"30px",
+       
+        }}
+      sx={{
+        borderRadius: '28px',
+        padding: '8px 16px',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
+        '&:hover': {
+          backgroundColor: '#2E7112',
+        },
+      }}>
+        Register
+      </Button>
 
+      <Button variant="contained"
+        color="primary" 
+        type="submit" 
+        href="/change_password"
+        style={{
+        borderRadius: 35,
+        backgroundColor: "#212121",
+        paddingTop: "7px",
+        fontSize: "10px",
+        width:"180px",
+        height:"30px",
+       
+        }}
+      sx={{
+        borderRadius: '28px',
+        padding: '8px 16px',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
+        '&:hover': {
+          backgroundColor: '#2E7112',
+        },
+      }}>
+        Forgot my password
+      </Button>
 
+      
+
+      <br />
       <br />
       <SignInBtn/>
     </form>
