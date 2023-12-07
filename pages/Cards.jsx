@@ -9,7 +9,8 @@ import Rating from '@mui/material/Rating';
 const cardStyle = {
   maxWidth: 345,
   height: '100%', //para fijar el tamano 
-  margin: '30px'   //margen aplicado 
+  margin: '30px',   //margen aplicado 
+  borderRadius: 12
 };
 
 const descripcionStyle = { //estilo para el texto de las tarjetas
@@ -28,9 +29,8 @@ const anchorStyle = {
   color: 'inherit', // Usa el color heredado (por defecto)
 };
 
-const Tarjetas=({imagen,nombreCurso,descripcion,rating,href}) => {
+const CardTemplate=({image,title,description,rating,href}) => {
   
-
   return (
     <a href={href} style={anchorStyle}>
       <Card sx={cardStyle}>
@@ -38,23 +38,21 @@ const Tarjetas=({imagen,nombreCurso,descripcion,rating,href}) => {
           <CardMedia
             component="img"
             height="140" //alto de la imagen, altera el tamano de la carta 
-            image={imagen}
+            image={image}
             alt="imagen curso"
             style={{ objectFit: 'cover' }} // Establecer objectFit en 'cover'
           />
           <CardContent style={{ flex: 1 }}>
             <Typography gutterBottom variant="h5" component="div" >
-                {nombreCurso} 
+                {title} 
             </Typography >
             <Typography sx={descripcionStyle}ariant="body2" color="text.secondary" >
-                {descripcion} 
+                {description} 
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
+          
             
           <Rating name="no-value" value={rating} style={ratingStyle} disabled/>
           
@@ -64,4 +62,4 @@ const Tarjetas=({imagen,nombreCurso,descripcion,rating,href}) => {
 
   );
 };
-export default Tarjetas;
+export default CardTemplate;
