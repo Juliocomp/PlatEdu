@@ -9,10 +9,10 @@ import SignInBtn from './signin-btn';
 
 
 const LogForm = () => {
- 
-
-  
-
+  const buttonStyle = {
+    fontSize: '12px',
+    padding: '5px'
+  };
   
 
   const handleSubmit = (e) => {
@@ -83,10 +83,36 @@ const LogForm = () => {
       }}>
         LogIn
       </Button>
+      
       <br />
+      <br />
+      <Button variant="contained"
+        color="primary" 
+        type="submit" 
+        style={{
+        borderRadius: 35,
+        backgroundColor: "#212121",
+        paddingTop: "7px",
+        fontSize: "10px",
+        width:"180px",
+        height:"30px",
+       
+        }}
+      sx={{
+        borderRadius: '28px',
+        padding: '8px 16px',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
+        '&:hover': {
+          backgroundColor: '#2E7112',
+        },
+      }}>
+        Forgot my password
+      </Button>
 
 
+      
 
+      <br />
       <br />
       <SignInBtn/>
     </form>
