@@ -1,8 +1,8 @@
-import MiniDrawer from '@/components/sideMenu';
+import MiniDrawer from '@/components/side-Menu';
 import { CurtainsOutlined } from '@mui/icons-material';
 import { Container, Typography, Button, List, ListItem, ListItemText, Box } from '@mui/material';
-import Capp from '@/components/CardCourseEspecific';
-import { Main } from '@/components/sideMenu';
+import Capp from '@/components/Card-Course-Especific';
+import { Main } from '@/components/side-Menu';
 
 
 export default function Home() {
